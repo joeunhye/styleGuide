@@ -1,0 +1,25 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    background-color: #fff;
+    color: #000;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+  
+body {
+    margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+    /* 라이트 모드에 적용할 스타일 정의 */
+}
+
+@media (prefers-color-scheme: dark) {
+    /* 다크 모드에 적용할 스타일 정의 */
+}
