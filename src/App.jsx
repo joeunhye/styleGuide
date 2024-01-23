@@ -1,22 +1,20 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Side from './components/Side/Side';
+import ReadMe from './page/ReadMe/ReadMe'
+import Buttons from './page/Buttons/Buttons';
 
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path='/' element={<Layout />} /> */}
-        <Header />
-        <Side />
-        <Footer />
+        <Route path='/' element={<Layout />}>
+          <Route path='/readme' element={<ReadMe />} />
+          <Route path='/buttons' element={<Buttons />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
 }
 
 export default App
-https://dev.to/rebeccapeltz/react-18-react-router-v6-sidebar-navigation-and-a-sandpack-component-5c02
