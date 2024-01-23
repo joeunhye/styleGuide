@@ -14,6 +14,8 @@
     --color-block: #2e2e2e;
     --color-yellow: #f8b600;
     --color-blue: #149eca;
+    --color-gray: #bababa;
+    --color-lightgray: #ddd;
 }
 
 html.darkMode {
@@ -21,6 +23,7 @@ html.darkMode {
     --color-bg: #0e0f1b;
     --color-dark: #fff;
     --color-block: #e0e0e0;
+    --color-lightgray: #414552;
 }
 
 body, 
@@ -43,6 +46,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
+    color: var(--color-block);
 }
 
 @media (prefers-color-scheme: light) {

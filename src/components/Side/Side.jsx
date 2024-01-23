@@ -1,4 +1,4 @@
-import { NavLink  } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Side.module.scss';
 import classNames from 'classnames/bind';
 
