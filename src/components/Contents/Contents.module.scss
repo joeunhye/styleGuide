@@ -1,0 +1,19 @@
+.preview {
+    margin: 0 auto;
+    height: 650px;
+    border: 10px solid var(--color-block);
+    border-radius: 10px;
+    transition: 0.3s max-width ease;
+
+    &.desktop {
+        max-width: 1500px;
+    }
+
+    &.tablet {
+        max-width: 900px;
+    }
+
+    &.mobile {
+        max-width: 375px;
+    }
+}

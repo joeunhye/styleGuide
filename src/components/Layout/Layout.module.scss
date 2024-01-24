@@ -1,3 +1,9 @@
 .layout {
     display: flex;
+
+    &.desktop {
+        & + div {
+            color:red
+        }
+    }
 }
