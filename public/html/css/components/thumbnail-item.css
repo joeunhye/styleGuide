@@ -1,0 +1,103 @@
+/* 썸네일 리스트 */
+.thumbnail-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    gap: 10px;
+}
+
+.thumbnail-item {
+    border: 1px solid #ddd;
+}
+
+.thumbnail-item .thumbnail-img {
+    flex-shrink: 0;
+}
+.thumbnail-item .thumbnail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.thumbnail-item .item-info-group {
+    padding: 16px;
+}
+.thumbnail-item .text__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* row type */
+.thumbnail-item.row .item-wrapper {
+    display: flex;
+}
+
+.thumbnail-item.row .thumbnail-img {
+    width: 30%;
+}
+
+.thumbnail-item.row .text__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 리스트형 갤러리형 */
+.thumbnail-list.list-grid-vertical {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.thumbnail-list.list-grid-vertical .item-wrapper {
+    display: flex;
+}
+
+.thumbnail-list.list-grid-vertical .thumbnail-img {
+    width: 30%;
+}
+
+.thumbnail-list.list-grid-vertical .text__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.grid-view-select {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.grid-view-select .btn-item {
+    line-height: 0;
+}
+
+.grid-view-select .grid-view-btn {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #ddd;
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+}
+
+.grid-view-select .grid-view-btn[data-grid="gridList"] {
+    background-image: url("../../images/icon-list-vertical-gray.png");
+}
+.grid-view-select .grid-view-btn[data-grid="gridGallery"] {
+    background-image: url("../../images/icon-list-horizon-gray.png");
+}
+.grid-view-select .grid-view-btn[data-grid="gridList"].on {
+    background-image: url("../../images/icon-list-vertical-black.png");
+}
+.grid-view-select .grid-view-btn[data-grid="gridGallery"].on {
+    background-image: url("../../images/icon-list-horizon-black.png");
+}
+
+.grid-view-select .grid-view-btn.on {
+    background-color: #ffffff;
+}
+
+
+@media all and (max-width: 486px ) {
+    .thumbnail-list {
+        grid-template-columns: auto;
+    }
+}

@@ -1,0 +1,239 @@
+/* =============== input =============== */
+.normal-input {
+    width: 100%;
+    height: 40px;    
+    padding: 6px 16px;
+    border: 1px solid #dddddd;
+}
+
+.normal-input:disabled {
+    background-color: #f1f1f1;
+    color: #aaa;
+}
+.normal-input:disabled::placeholder {
+    color: #aaa;
+}
+
+.input-wrap {
+    /* width: 400px; */
+}
+
+.input-wrap + .input-wrap {
+    margin-top: 15px;
+}
+
+.input-wrap input {
+    width: 100%;
+}
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.input-group .input-wrap {
+    flex-grow: 1;
+    width: auto;
+}
+
+/* input date */
+.input-group.date input {
+    flex: 1;
+}
+
+input[type="date"].date-input {
+    position: relative;
+}
+
+input[type="date"].date-input:invalid:before {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    content: attr(data-placeholder);
+    background: #ffffff;
+    color: #888888;
+}
+
+input[type="date"].date-input:valid::before {
+    display: none;
+}
+
+input[type="date"].date-custom {
+    position: relative;
+    background: url("../../../images/calendar-days-regular.svg") no-repeat 98% center / 15px;
+}
+input[type="date"].date-custom::-webkit-calendar-picker-indicator {
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
+
+/* 검색 */
+.search-box {
+    position: relative;
+}
+.search-box input[type="search"] {
+    padding: 6px 40px 6px 16px;
+}
+
+.search-box button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: url("../../../images/icon-search.svg") no-repeat center / 50%;
+    transform: translateY(-50%);
+}
+
+/* 파일 업로드 */
+.upload-box .file-item {
+    display: flex;
+    align-items: center;
+}
+.upload-box .file-item + .file-item {
+    margin: 8px 0 0;
+}
+
+.upload-box .file-item-delete {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    text-indent: -9999px;
+    background: url(../../../images/icon-x.svg) no-repeat center / 80%;
+    background-position: center;
+}
+
+/* select */
+.select {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    padding: 6px 12px;
+    color: #666;
+    background: url(../../../images/icon-arrow-down.svg) no-repeat;
+    background-position: calc(100% - 12px) center;
+    border: 1px solid #e5e5e5;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.select:disabled {
+    background-color: #dddddd;
+}
+
+/* textarea */
+.textarea {
+    width: 100%;
+    padding: 16px;
+    resize: none;
+    border: 1px solid #dddddd;
+}
+
+.textarea:disabled {
+    background-color: #f1f1f1;
+    color: #aaa;
+}
+
+.textarea:disabled::placeholder {
+    color: #aaa;
+}
+
+/* 스크롤바 설정*/
+.textarea::-webkit-scrollbar{
+    width: 6px;
+}
+
+.textarea::-webkit-scrollbar-thumb{
+    height: 17%;
+    background-color: #6a6a6a;
+    border-radius: 10px;    
+}
+
+.textarea::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.textarea-count {
+    position: relative;
+    padding: 0 0 36px;
+    border: 1px solid #dddddd;
+}
+
+.textarea-count .count-num {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 16px;
+}
+
+.textarea-count .textarea {
+    min-height: 200px;
+    padding: 16px 16px 0;
+    border: 0;
+}
+
+/* 이메일 입력 */
+.input-group.email input:nth-of-type(1) {
+    width: 60%;
+}
+.input-group.email input:nth-of-type(2) {
+    width: 50%;
+}
+
+/* 주소 입력 */
+.input-wrap.adress {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.input-wrap.adress .btn + input {
+    width: auto;
+    flex-grow: 1;
+}
+
+/* 연락처 입력 */
+.input-group.tel .select {
+    width: 30%;
+}
+
+.input-group.tel input {
+    width: 30%;
+}
+
+/* input text */
+.hyphen {
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.label-text {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.label-text + input {
+    margin-top: 10px;
+}
+
+.text--message {
+    margin-top: 10px;
+}
+
+.text--message.error {
+    color: red;
+}
+.text--message.suceess {
+    color: blue;
+}
+

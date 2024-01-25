@@ -1,0 +1,55 @@
+/* import */
+@import "./components/button.css";
+@import "./components/input/input.css";
+@import "./components/input/input-check.css";
+@import "./components/input/input-radio.css";
+@import "./components/input/switch.css";
+@import "./components/input/star-rating.css";
+@import "./components/tab.css";
+@import "./components/table.css";
+@import "./components/pagination.css";
+@import "./components/modal.css";
+@import "./components/accordion.css";
+@import "./components/sort-list.css";
+@import "./components/dropdown-toggle.css";
+@import "./components/font.css";
+@import "./components/thumbnail-item.css";
+@import "./components/list.css";
+@import "./components/layout/header.css";
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.skip {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.mb-only {
+    display: none;
+}
+
+@media all and (max-width: 768px) {
+    .mb-only {
+        display: block !important;
+    }
+    .pc-only {
+        display: none !important;
+    }
+}

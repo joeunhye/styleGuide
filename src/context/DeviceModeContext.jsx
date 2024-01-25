@@ -4,9 +4,9 @@ const DeviceModeContext = createContext();
 
 export function DeviceModeProvider({children}) {
     const [DeviceModeset, setDeviceModeset] = useState({
-        mobile: true,
+        mobile: false,
         tablet: false,
-        desktop: false
+        desktop: true
     });
 
     const handleDeviceMode = (e) => {
