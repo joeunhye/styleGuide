@@ -17,3 +17,32 @@
         max-width: 375px;
     }
 }
+
+.code {
+
+    .code-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 15px 8px 25px;
+        border-radius: 10px 10px 0 0;
+        font-size: 0.9rem;
+        background: #101325;
+
+        p {
+            margin: 0;
+        }
+
+        .btn-copy {
+            padding: 0;
+            opacity: 0.8;
+            color: var(--color-gray);
+        }
+    }
+    
+    code {
+        span {
+            font-family: "Pretendard-Regular";
+        }
+    }
+}
