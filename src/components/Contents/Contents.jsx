@@ -6,31 +6,48 @@ import styles from './Contents.module.scss';
 import classNames from 'classnames/bind';
 import { GoCopy } from "react-icons/go";
 import { IoMdCheckmark } from "react-icons/io";
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 const Contents = ({ content }) => {
     const {DeviceModeset} = useDeviceMode();
+    const deviceStyle = cx(DeviceModeset);
     const location = useLocation();
     const [Copy, setCopy] = useState(false);
-    
+    const frameObj = useRef(null);
     const iframeName = location.pathname.split('/')[1];
 
-    const deviceStyle = cx(DeviceModeset);
+    const [CodeHtml, setCodeHtml] = useState('');
+    
+    // const codeString = '(num) => num + 1';
 
-    const codeString = '(num) => num + 1';
+    useEffect(()=>{ 
+        const iframeHtml = setTimeout(() => {
+            return frameObj.current.contentWindow.document.body.innerHTML
+        }, 1000);
+        // setCodeHtml(iframeHtml)
+    }, [CodeHtml])
+
+    // const getIframeHtml = () => {
+    //     const iframeHtml = frameObj.current.contentWindow.document.body.innerHTML;
+    //     setCodeHtml(iframeHtml)
+    // }
+
+    console.log(CodeHtml)
 
     const iframeCont = () => {
+        const iframeUrl = `/html/${iframeName}.html`;
         return {
             __html: 
-            `<iframe src="/html/${iframeName}.html" width="100%" height="600px" frameborder=0 framespacing=0 />`
+            `<iframe src="${iframeUrl}" width="100%" height="600px" frameborder=0 framespacing=0 />`
         }
     }
 
     if(content === "preview") {
         return <div className={cx('preview', deviceStyle)}>
-            <div dangerouslySetInnerHTML={iframeCont()} />
+            {/* <div dangerouslySetInnerHTML={iframeCont()} /> */}
+            <iframe src={`/html/${iframeName}.html`} width="100%" height="600px" ref={frameObj} />
         </div>
     }
     return(
@@ -40,11 +57,11 @@ const Contents = ({ content }) => {
 
                 {!Copy ? 
                     (<button className={cx('btn-copy')} onClick={() => {
-                        navigator.clipboard.writeText(codeString);
+                        navigator.clipboard.writeText(CodeHtml);
                         setCopy(true);
                         setTimeout(() => {
                             setCopy(false)
-                        }, 3000)
+                        }, 1000)
                     }}>
                         <GoCopy size={20} />
                     </button>)
@@ -56,7 +73,7 @@ const Contents = ({ content }) => {
                 
             </div> 
             <SyntaxHighlighter language="javascript" style={atomOneDark} customStyle={{margin: '0px', padding: '25px', background: '#33373f', borderRadius: '0 0 10px 10px'}} wrapLongLines={true}>
-                {codeString}
+                {CodeHtml}
             </SyntaxHighlighter>
         </div>
     );
