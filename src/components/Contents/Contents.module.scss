@@ -1,48 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
 .preview {
-    margin: 0 auto;
-    height: 650px;
-    border: 10px solid var(--color-block);
-    border-radius: 10px;
-    transition: 0.3s max-width ease;
+	margin: 0 auto;
+	height: 650px;
+	border: 10px solid var(--color-block);
+	border-radius: 10px;
+	transition: 0.3s max-width ease;
 
-    &.desktop {
-        max-width: 1500px;
-    }
+	&.desktop {
+		max-width: 1500px;
+	}
 
-    &.tablet {
-        max-width: 900px;
-    }
+	&.tablet {
+		max-width: 900px;
+	}
 
-    &.mobile {
-        max-width: 375px;
-    }
+	&.mobile {
+		max-width: 375px;
+	}
+
+	iframe {
+		border: none;
+	}
 }
 
 .code {
+	max-width: 1200px;
+	margin: 0 auto;
 
-    .code-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 8px 15px 8px 25px;
-        border-radius: 10px 10px 0 0;
-        font-size: 0.9rem;
-        background: #101325;
+	.code-title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 8px 15px 8px 25px;
+		border-radius: 10px 10px 0 0;
+		font-size: 0.9rem;
+		background: #0e0f1b;
 
-        p {
-            margin: 0;
-        }
+		p {
+			margin: 0;
+		}
 
-        .btn-copy {
-            padding: 0;
-            opacity: 0.8;
-            color: var(--color-gray);
-        }
-    }
-    
-    code {
-        span {
-            font-family: "Pretendard-Regular";
-        }
-    }
+		.btn-copy {
+			padding: 0;
+			opacity: 0.8;
+			color: var(--color-gray);
+		}
+	}
+
+	code {
+		span {
+			font-family: "Fira Code", monospace;
+		}
+	}
 }
