@@ -43,6 +43,24 @@
 		&.dark {
 			color: #fff;
 		}
+
+		&.mobile {
+			button[data-device='mobile'] {
+				color: #159eca;
+			}
+		}
+
+		&.tablet {
+			button[data-device='tablet'] {
+				color: #159eca;
+			}
+		}
+
+		&.desktop {
+			button[data-device='desktop'] {
+				color: #159eca;
+			}
+		}
 	}
 
 	.theme {

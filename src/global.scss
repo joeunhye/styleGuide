@@ -9,12 +9,12 @@
 	color-scheme: light dark;
 	color: #000;
 	--color-bg-dark: #fff;
-	--color-bg: #e2e2e2;
+	--color-bg: #ededed;
 	--color-dark: #22252f;
 	--color-block: #2e2e2e;
 	--color-yellow: #f8b600;
 	--color-blue: #159eca;
-	--color-gray: #bababa;
+	--color-gray: #8a8a8a;
 	--color-lightgray: #ddd;
 }
 
@@ -23,6 +23,7 @@ html.darkMode {
 	--color-bg: #0e0f1b;
 	--color-dark: #fff;
 	--color-block: #e0e0e0;
+	--color-gray: #b3b3b3;
 	--color-lightgray: #414552;
 }
 
@@ -52,6 +53,7 @@ button {
 /* scroll bar custom */
 ::-webkit-scrollbar {
 	width: 8px;
+	height: 8px;
 }
 
 /* Track */

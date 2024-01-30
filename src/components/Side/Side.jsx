@@ -7,8 +7,10 @@ const cx = classNames.bind(styles);
 const Side = () => {
     return(
         <nav className={cx('side')}>
-            <NavLink to='/'>Read Me</NavLink>
+            <NavLink to='/'>📌 Read Me</NavLink>
             <NavLink to='/buttons'>Buttons</NavLink>
+            <NavLink to='/text'>Text</NavLink>
+            <NavLink to='/input'>Input</NavLink>
         </nav>
     );
 }
