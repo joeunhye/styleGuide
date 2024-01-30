@@ -24,10 +24,19 @@ const Contents = ({ content }) => {
 		setCodeHtml(frameObj.current?.contentWindow.document.body.innerHTML);
 	};
 
+	// const iframeCont = () => {
+    //     const iframeUrl = `/html/${iframeName}.html`;
+    //     return {
+    //         __html: 
+    //         `<iframe src="${iframeUrl}" width="100%" height="600px" frameborder=0 framespacing=0 />`
+    //     }
+    // }
+
 	if (content === "preview") {
 		return (
 			<div className={cx("preview", deviceStyle)}>
-				<iframe src={`/html/${iframeName}.html`} width="100%" height="600px" ref={frameObj} onLoad={hadleLoaded} />
+				{/* <div dangerouslySetInnerHTML={iframeCont()} /> */}
+				<iframe src={`/html/${iframeName}.html`} width="100%" height="650" ref={frameObj} onLoad={hadleLoaded} />
 			</div>
 		);
 	}
@@ -49,9 +58,14 @@ const Contents = ({ content }) => {
 						<GoCopy size={20} />
 					</button>
 				) : (
-					<button className={cx("btn-copy")}>
-						<IoMdCheckmark size={20} color="#159eca" />
-					</button>
+					<>
+						<button className={cx("btn-copy")}>
+							<IoMdCheckmark size={20} color="#159eca" />
+						</button>
+						<div className={cx('speech-bubble')}>
+							Copied 😀
+						</div>
+					</>
 				)}
 			</div>
 			<CodeSnippet language="html" code={CodeHtml} />

@@ -11,6 +11,9 @@ const Side = () => {
             <NavLink to='/buttons'>Buttons</NavLink>
             <NavLink to='/text'>Text</NavLink>
             <NavLink to='/input'>Input</NavLink>
+            <NavLink to='/form'>Form</NavLink>
+            <NavLink to='/checkboxradio'>CheckBox & Radio</NavLink>
+            <NavLink to='/switch'>Switch</NavLink>
         </nav>
     );
 }

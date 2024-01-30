@@ -46,87 +46,160 @@
 </head>
 
 <body>
-    <div class="input-wrap">
-        <label for="input-text" class="visually-hidden">내용입력</label>
-        <input type="text" id="input-text" class="normal-input" placeholder="내용을 입력하세요.">
-        <p class="text--message error">에러 메세지 입니다.</p>
-        <p class="text--message suceess">에러 메세지 입니다.</p>
-    </div>
+    <!-- Input -->
+    <div class="demo-contents">
+        <div class="code-title">Input</div>
 
-    <hr>
-
-    <div class="input-wrap">
-        <label for="input-text" class="visually-hidden">내용입력</label>
-        <input type="text" id="input-text" class="normal-input" placeholder="내용을 입력하세요." disabled="">
-    </div>
-
-    <hr>
-
-    <div class="input-group date">
-        <label for="input-text" class="visually-hidden">날짜 시작 입력</label>
-        <input type="date" id="input-date" class="normal-input">
-        <span class="hyphen">~</span>
-        <label for="input-text" class="visually-hidden">날짜 종료 입력</label>
-        <input type="date" id="input-date" class="normal-input">
-    </div>
-
-    <hr>
-
-    <label for="input-text" class="visually-hidden">날짜 입력</label>
-    <input type="date" id="input-date" class="normal-input date-input" data-placeholder="yyyy-mm-dd" required="">
-
-    <hr>
-
-    <label for="input-text" class="visually-hidden">날짜 입력</label>
-    <input type="date" id="input-date" class="normal-input date-custom">
-
-    <hr>
-
-    <select name="" id="" class="select">
-        <option value="" hidden="">옵션을 선택해주세요</option>
-        <option value="">옵션1</option>
-        <option value="">옵션2</option>
-        <option value="">옵션3</option>
-    </select>
-    <select name="" id="" class="select" disabled="">
-        <option value="" hidden="">옵션을 선택해주세요</option>
-        <option value="">옵션1</option>
-        <option value="">옵션2</option>
-        <option value="">옵션3</option>
-    </select>
-
-    <hr>
-
-    <div class="search-box">
-        <input type="search" name="" id="" class="normal-input" placeholder="검색어를 입력하세요">
-        <button type="button"><span class="visually-hidden">검색</span></button>
-    </div>
-
-    <hr>
-
-    <textarea name="" id="" cols="" rows="" class="textarea" placeholder="내용을 입력해주세요"></textarea>
-
-    <hr>
-
-    <div class="textarea-count">
-        <textarea name="" id="" cols="" rows="" class="textarea" placeholder="내용을 입력해주세요"></textarea>
-        <div class="count-num">
-            <span>0</span>
-            <span>/ 500</span>
+        <!-- sample code -->
+        <div class="input-wrap">
+            <label for="input-text" class="visually-hidden">내용입력</label>
+            <input type="text" id="input-text" class="normal-input" placeholder="내용을 입력하세요.">
+            <p class="text--message error">에러 메세지 입니다.</p>
+            <p class="text--message suceess">에러 메세지 입니다.</p>
         </div>
     </div>
 
     <hr>
 
-    <textarea name="" id="" cols="" rows="" class="textarea" placeholder="내용을 입력해주세요" disabled=""></textarea>
+    <!-- Input Disabled -->
+    <div class="demo-contents">
+        <div class="code-title">Input Disabled</div>
+
+        <!-- sample code -->
+        <div class="input-wrap">
+            <label for="input-text" class="visually-hidden">내용입력</label>
+            <input type="text" id="input-text" class="normal-input" placeholder="내용을 입력하세요." disabled="">
+        </div>
+    </div>
 
     <hr>
 
-    <textarea name="" id="" rows="1" class="textarea" placeholder="내용을 입력해주세요" onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+    <!-- Input Date -->
+    <div class="demo-contents">
+        <div class="code-title">Input Date</div>
+
+        <!-- sample code -->
+        <div class="input-group date">
+            <label for="input-text" class="visually-hidden">날짜 시작 입력</label>
+            <input type="date" id="input-date" class="normal-input">
+            <span class="hyphen">~</span>
+            <label for="input-text" class="visually-hidden">날짜 종료 입력</label>
+            <input type="date" id="input-date" class="normal-input">
+        </div>
+    </div>
 
     <hr>
 
-    <textarea name="" id="" rows="1" class="textarea read_textarea" placeholder="내용을 입력해주세요" readonly="" style="height: 136px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+    <!-- Input Date Placeholder -->
+    <div class="demo-contents">
+        <div class="code-title">Input Date Placeholder</div>
+
+        <!-- sample code -->
+        <label for="input-text" class="visually-hidden">날짜 입력</label>
+        <input type="date" id="input-date" class="normal-input date-input" data-placeholder="yyyy-mm-dd" required="">
+    </div>
+
+    <hr>
+
+    <!-- Input Date Custom -->
+    <div class="demo-contents">
+        <div class="code-title">Input Date Custom</div>
+
+        <!-- sample code -->
+        <label for="input-text" class="visually-hidden">날짜 입력</label>
+        <input type="date" id="input-date" class="normal-input date-custom">
+    </div>
+
+    <hr>
+
+    <!-- Select -->
+    <div class="demo-contents">
+        <div class="code-title">Select</div>
+
+        <!-- sample code -->
+        <select name="" id="" class="select">
+            <option value="" hidden="">옵션을 선택해주세요</option>
+            <option value="">옵션1</option>
+            <option value="">옵션2</option>
+            <option value="">옵션3</option>
+        </select>
+        <select name="" id="" class="select" disabled="">
+            <option value="" hidden="">옵션을 선택해주세요</option>
+            <option value="">옵션1</option>
+            <option value="">옵션2</option>
+            <option value="">옵션3</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <!-- Search Input -->
+    <div class="demo-contents">
+        <div class="code-title">Search Input</div>
+
+        <!-- sample code -->
+        <div class="search-box">
+            <input type="search" name="" id="" class="normal-input" placeholder="검색어를 입력하세요">
+            <button type="button"><span class="visually-hidden">검색</span></button>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Textarea -->
+    <div class="demo-contents">
+        <div class="code-title">Textarea</div>
+
+        <!-- sample code -->
+        <textarea name="" id="" cols="" rows="" class="textarea" placeholder="내용을 입력해주세요"></textarea>
+    </div>
+
+    <hr>
+
+    <!-- Textarea 글자수 제한 -->
+    <div class="demo-contents">
+        <div class="code-title">Textarea 글자수 제한</div>
+
+        <!-- sample code -->
+        <div class="textarea-count">
+            <textarea name="" id="" cols="" rows="" class="textarea" placeholder="내용을 입력해주세요"></textarea>
+            <div class="count-num">
+                <span>0</span>
+                <span>/ 500</span>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Textarea Disabled -->
+    <div class="demo-contents">
+        <div class="code-title">Textarea Disabled</div>
+
+        <!-- sample code -->
+        <textarea name="" id="" cols="" rows="" class="textarea" placeholder="내용을 입력해주세요" disabled=""></textarea>
+    </div>
+
+    <hr>
+
+    <!-- Textarea 줄바꿈시 높이 조절 -->
+    <div class="demo-contents">
+        <div class="code-title">Textarea 줄바꿈시 높이 조절</div>
+
+        <!-- sample code -->
+        <textarea name="" id="" rows="1" class="textarea" placeholder="내용을 입력해주세요" onkeydown="resize(this)" onkeyup="resize(this)"></textarea>
+    </div>
+
+    <hr>
+
+    <!-- Textarea Readonly 내부 글자에 따른 높이 조절 -->
+    <div class="demo-contents">
+        <div class="code-title">Textarea Readonly 내부 글자에 따른 높이 조절</div>
+
+        <!-- sample code -->
+        <textarea name="" id="" rows="1" class="textarea read_textarea" placeholder="내용을 입력해주세요" readonly="" style="height: 136px;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+    </div>
+
 </body>
 
 </html>

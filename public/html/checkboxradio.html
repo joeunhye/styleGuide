@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- search input -->
+    <div class="demo-contents">
+        <div class="code-title">search input</div>
+
+        <!-- sample code -->
+        <div class="upload-box">
+            <input type="file" name="" id="upload-file" class="visually-hidden">
+            <label for="upload-file" class="btn btn--secondaly btn-m">파일선택</label>
+            <!-- PUB : 업로드 파일 있을 때 -->
+            <ul class="file-list">
+                <li class="file-item">
+                    <span class="file-item-name">업로드된 파일1</span>
+                    <button type="button" class="file-item-delete">삭제</button>
+                </li>
+                <li class="file-item">
+                    <span class="file-item-name">업로드된 파일2</span>
+                    <button type="button" class="file-item-delete">삭제</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 별점 주기 -->
+    <div class="demo-contents">
+        <div class="code-title">별점 주기</div>
+
+        <!-- sample code -->
+        <div class="rating">
+            <input type="radio" id="star5" name="rate" value="5">
+            <label for="star5" title="text"></label>
+            <input type="radio" id="star4" name="rate" value="4">
+            <label for="star4" title="text"></label>
+            <input checked="" type="radio" id="star3" name="rate" value="3">
+            <label for="star3" title="text"></label>
+            <input type="radio" id="star2" name="rate" value="2">
+            <label for="star2" title="text"></label>
+            <input type="radio" id="star1" name="rate" value="1">
+            <label for="star1" title="text"></label>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 별점 표시 -->
+    <div class="demo-contents">
+        <div class="code-title">별점 표시</div>
+
+        <!-- sample code -->
+        <!-- PUB : width로 별 표시 -->
+        <div class="star-rating">
+            <div class="star" style="width: 20%"><span class="visually-hidden">평점</span></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- check-box -->
+    <div class="demo-contents">
+        <div class="code-title">check-box</div>
+
+        <!-- sample code -->
+        <!-- PUB : 기본 -->
+        <input type="checkbox" name="" id="check-box1">
+        <label for="check-box1">체크박스</label>
+
+        <!-- PUB : 커스텀 -->
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box2" class="visually-hidden">
+            <label for="check-box2">체크박스</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box3" class="visually-hidden" checked="">
+            <label for="check-box3">체크박스</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box4" class="visually-hidden" disabled="">
+            <label for="check-box4">체크박스</label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box3" class="visually-hidden" checked="" disabled="">
+            <label for="check-box3">체크박스</label>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- radio -->
+    <div class="demo-contents">
+        <div class="code-title">radio</div>
+
+        <!-- sample code -->
+        <!-- PUB : 기본 -->
+        <input type="radio" name="radio" id="radio-box1">
+        <label for="radio-box1">라디오</label>
+
+        <!-- PUB : 커스텀 -->
+        <div class="radio">
+            <input type="radio" name="radio" id="radio-box2" class="visually-hidden">
+            <label for="radio-box2">라디오</label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="radio" id="radio-box3" class="visually-hidden" checked="">
+            <label for="radio-box3">라디오</label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="radio-disabled" id="radio-box3" class="visually-hidden" disabled="">
+            <label for="radio-box3">라디오</label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="radio-disabled" id="radio-box3" class="visually-hidden" checked="" disabled="">
+            <label for="radio-box3">라디오</label>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- check-box(단독사용) -->
+    <div class="demo-contents">
+        <div class="code-title">check-box(단독사용)</div>
+
+        <!-- sample code -->
+        <!-- PUB : 기본 -->
+        <input type="checkbox" name="" id="check-box1">
+        <label for="check-box2"><span class="visually-hidden">체크박스</span></label>
+
+        <!-- PUB : 커스텀 -->
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box2" class="visually-hidden">
+            <label for="check-box2"><span class="visually-hidden">체크박스 1</span></label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box3" class="visually-hidden" checked="">
+            <label for="check-box3"><span class="visually-hidden">체크박스 2</span></label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box4" class="visually-hidden" disabled="">
+            <label for="check-box4"><span class="visually-hidden">체크박스 3</span></label>
+        </div>
+        <div class="check-box">
+            <input type="checkbox" name="" id="check-box5" class="visually-hidden" checked="" disabled="">
+            <label for="check-box5"><span class="visually-hidden">체크박스 4</span></label>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- radio(단독사용) -->
+    <div class="demo-contents">
+        <div class="code-title">radio(단독사용)</div>
+
+        <!-- sample code -->
+        <!-- PUB : 기본 -->
+        <input type="radio" name="radio-one" id="radio-one1">
+        <label for="radio-one1"><span class="visually-hidden">라디오</span></label>
+
+        <!-- PUB : 커스텀 -->
+        <div class="radio">
+            <input type="radio" name="radio-one" id="radio-one2" class="visually-hidden">
+            <label for="radio-one2"><span class="visually-hidden">라디오</span></label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="radio-one" id="radio-one3" class="visually-hidden" checked="">
+            <label for="radio-one3"><span class="visually-hidden">라디오</span></label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="radio-one-disabled" id="radio-one3" class="visually-hidden" disabled="">
+            <label for="radio-one3"><span class="visually-hidden">라디오</span></label>
+        </div>
+        <div class="radio">
+            <input type="radio" name="radio-one-disabled" id="radio-one3" class="visually-hidden" checked="" disabled="">
+            <label for="radio-one3"><span class="visually-hidden">라디오</span></label>
+        </div>
+    </div>
+</body>
+
+</html>

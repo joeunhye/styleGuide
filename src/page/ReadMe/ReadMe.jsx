@@ -1,5 +1,4 @@
 import ContWrap from '../../components/ContWrap/ContWrap';
-import styles from './ReadMe.module.scss';
 
 const ReadMe = () => {
     return(

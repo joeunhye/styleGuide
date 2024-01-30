@@ -29,6 +29,7 @@
 	margin: 0 auto;
 
 	.code-title {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -46,6 +47,35 @@
 			opacity: 0.8;
 			color: var(--color-gray);
 		}
+
+		.speech-bubble {
+			width: 70px;
+			padding: 7px 2px;
+			text-align: center;
+			color: white;
+			position: absolute;
+			background: #159eca;
+			border-radius: 5px;
+			top: 5px;
+			right:45px;
+			font-weight: 100;
+			font-size: 12px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				width: 0;
+				height: 0;
+				border: 7px solid transparent;
+				border-left-color: #159eca;
+				border-right: 0;
+				margin-top: -7px;
+				margin-right: -5px;
+			}
+		}
+		
 	}
 
 	pre {
@@ -70,12 +100,12 @@
 		/* Handle */
 		&::-webkit-scrollbar-thumb {
 			border-radius: 5px;
-			background: #159eca;
+			background: #0e0f1b;
 		}
 		
 		/* Handle on hover */
 		&::-webkit-scrollbar-thumb:hover {
-			background: #159eca;
+			background: #0e0f1b;
 		}
 
 		span {

@@ -48,6 +48,12 @@ a {
     text-decoration: none;
     color: var(--font-color);
 }
+
+hr {
+	margin: 20px 0;
+    border-top: 1px dashed #d1d1d1;
+}
+
 .navigation {
     position: relative;
     min-width: 168px;
@@ -89,7 +95,7 @@ a {
     text-transform: capitalize;
     font-size: 18px;
     font-weight: 700;
-    border-bottom: 1px dashed #d1d1d1;
+    /* border-bottom: 1px dashed #d1d1d1; */
 }
 
 .code-title::before {

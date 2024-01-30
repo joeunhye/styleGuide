@@ -1,13 +1,12 @@
 import ContTab from '../../components/ContTab/ContTab';
 import ContWrap from '../../components/ContWrap/ContWrap';
 
-const Buttons = () => {
+const CheckBoxRadio = () => {
     return(
-        <ContWrap title='Buttons'>
-            <p>Buttons 페이지 입니다.</p>
+        <ContWrap title="CheckBox & Radio">
             <ContTab />
         </ContWrap>
     );
 }
 
-export default Buttons
+export default CheckBoxRadio
