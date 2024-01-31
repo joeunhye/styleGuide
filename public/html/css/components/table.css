@@ -3,7 +3,7 @@
     box-sizing: border-box;
     width: 100%;
     border-collapse: collapse;
-    border-top: 1px solid #000;
+    border-top: 1px solid #0090e8;
     text-align: left;
 }
 
@@ -32,6 +32,7 @@
 .table td {
     padding: 20px;
     overflow-wrap: break-word;
+    color: #424242;
 }
 
 .table td:last-child {
@@ -159,6 +160,35 @@
     color: #424242;
 }
 
+/* depth-table */
+[class*=depth-table] th[colspan] {
+    font-size: 22px;
+    background: transparent;
+    font-weight: 700;
+    color: #000000;
+    padding: 34px 0 18px;
+}
+
+.table[class*=depth-table] {
+    border-top: 0;
+}
+
+.table[class*=depth-table] th[scope='row'] {
+    border-right: 1px solid #dddddd;
+}
+
+.table[class*=depth-table] th[scope='col'] {
+    border-right: 1px solid #dddddd;
+}
+
+.table[class*=depth-table] td + th[scope='row'] {
+    border-left: 1px solid #dddddd;
+}
+
+.table[class*=depth-table] th[scope='col']:last-child {
+    border-right: 0;
+}
+
 @media all and (max-width: 768px) {
     /***** TABLE *****/
     .table th {
@@ -205,12 +235,9 @@
         display: block;
     }
 
-    .mb-column-table td {
-        display: flex;
-    }
-
+    .mb-column-table td,
     .mb-column-table th {
-        display: none;
+        display: flex;
     }
 
     .mb-column-table td[data-title]::before {
@@ -244,7 +271,9 @@
     }
 
     .mb-row-table td + td,
-    .mb-column-table td + td {
+    .mb-column-table td + td,
+    .mb-row-table td + th,
+    .depth-type__one td {
         padding: 0 16px 16px;
     }
 
@@ -280,8 +309,30 @@
     }
 
     /* depth-table */
+    [class*=depth-table] th[colspan] {
+        font-size: 20px;
+        padding: 14px;
+        margin-top: 20px;
+        background: #f8f9fa;
+        color: #00467e;
+        border-top: 1px solid #dbdbdb;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    [class*=depth-table] tbody th {
+        padding: 16px 14px 12px;
+        background: transparent;
+        border: 0;
+        font-weight: 600;
+        color: #212121;
+    }  
+    
     .depth-table-column tbody th {
         display: none;
+    }
+
+    .depth-table-column th[colspan] {
+        display: block;
     }
 
     .depth-table-row tbody td {
@@ -292,5 +343,17 @@
     .depth-table-column tbody td {
         padding: 16px 14px 5px;
         border-bottom: 0;
+    }
+
+    .table[class*=depth-table] th[scope='row'] {
+        border: 0;
+    }
+    
+    .table[class*=depth-table] th[scope='col'] {
+        border: 0;
+    }
+    
+    .table[class*=depth-table] td + th[scope='row'] {
+        border: 0;
     }
 }

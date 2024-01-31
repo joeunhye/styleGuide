@@ -17,6 +17,10 @@
 @import "./components/list.css";
 @import "./components/layout/header.css";
 
+html, body {
+    font-size: 62.5%;
+}
+
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -43,6 +47,12 @@
 
 .mb-only {
     display: none;
+}
+
+@media all and (max-width: 1024px) {
+    html, body {
+        font-size: 55%;
+    }
 }
 
 @media all and (max-width: 768px) {

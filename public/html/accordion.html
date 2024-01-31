@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/components/accordion.js"></script>    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            accordionSeveral();
+            accordionBasic();
+            accordionSlide();
+        })
+    </script>
+</head>
+
+<body>
+    <!-- accordion -->
+    <div class="demo-contents">
+        <div class="code-title">accordion</div>
+
+        <!-- sample code -->
+        <div class="accordion accordion-several">
+            <ul>
+                <li class="item">
+                    <a href="javascript:void(0)" class="title">title <span class="visually-hidden">닫기</span></a>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus unde voluptatem voluptatibus quaerat accusamus ratione modi iure architecto optio natus magni ducimus? Ipsa nam asperiores libero explicabo, odit blanditiis nostrum perspiciatis ipsum doloremque tempore aliquam recusandae assumenda. Deserunt delectus ipsam omnis, accusamus quasi earum ut sequi dolorem nam, odit dolor. Nisi hic delectus deleniti id minus nam fugiat a quae aspernatur sed, vero maiores necessitatibus </div>
+                </li>
+                <li class="item">
+                    <a href="javascript:void(0)" class="title">title <span class="visually-hidden">닫기</span></a>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus unde voluptatem voluptatibus quaerat accusamus ratione modi iure architecto optio natus magni ducimus? Ipsa nam asperiores libero explicabo, odit blanditiis nostrum perspiciatis ipsum doloremque tempore aliquam recusandae assumenda. Deserunt delectus ipsam omnis, accusamus quasi earum ut sequi dolorem nam, odit dolor. Nisi hic delectus deleniti id minus nam fugiat a quae aspernatur sed, vero maiores necessitatibus </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- accordion 하나씩만 펼쳐지기 -->
+    <div class="demo-contents">
+        <div class="code-title">accordion 하나씩만 펼쳐지기</div>
+
+        <!-- sample code -->
+        <div class="accordion accordion-basic">
+            <ul>
+                <li class="item">
+                    <a href="javascript:void(0)" class="title">title <span class="visually-hidden">닫기</span></a>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus unde voluptatem voluptatibus quaerat accusamus ratione modi iure architecto optio natus magni ducimus? Ipsa nam asperiores libero explicabo, odit blanditiis nostrum perspiciatis ipsum doloremque tempore aliquam recusandae assumenda. Deserunt delectus ipsam omnis, accusamus quasi earum ut sequi dolorem nam, odit dolor. Nisi hic delectus deleniti id minus nam fugiat a quae aspernatur sed, vero maiores necessitatibus </div>
+                </li>
+                <li class="item">
+                    <a href="javascript:void(0)" class="title">title <span class="visually-hidden">닫기</span></a>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus unde voluptatem voluptatibus quaerat accusamus ratione modi iure architecto optio natus magni ducimus? Ipsa nam asperiores libero explicabo, odit blanditiis nostrum perspiciatis ipsum doloremque tempore aliquam recusandae assumenda. Deserunt delectus ipsam omnis, accusamus quasi earum ut sequi dolorem nam, odit dolor. Nisi hic delectus deleniti id minus nam fugiat a quae aspernatur sed, vero maiores necessitatibus </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- accordion 슬라이드다운 -->
+    <div class="demo-contents">
+        <div class="code-title">accordion 슬라이드다운</div>
+
+        <!-- sample code -->
+        <div class="accordion accordion-slide">
+            <ul>
+                <li class="item">
+                    <a href="javascript:void(0)" class="title">title <span class="visually-hidden">닫기</span></a>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus unde voluptatem voluptatibus quaerat accusamus ratione modi iure architecto optio natus magni ducimus? Ipsa nam asperiores libero explicabo, odit blanditiis nostrum perspiciatis ipsum doloremque tempore aliquam recusandae assumenda. Deserunt delectus ipsam omnis, accusamus quasi earum ut sequi dolorem nam, odit dolor. Nisi hic delectus deleniti id minus nam fugiat a quae aspernatur sed, vero maiores necessitatibus </div>
+                </li>
+                <li class="item">
+                    <a href="javascript:void(0)" class="title">title <span class="visually-hidden">닫기</span></a>
+                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, temporibus unde voluptatem voluptatibus quaerat accusamus ratione modi iure architecto optio natus magni ducimus? Ipsa nam asperiores libero explicabo, odit blanditiis nostrum perspiciatis ipsum doloremque tempore aliquam recusandae assumenda. Deserunt delectus ipsam omnis, accusamus quasi earum ut sequi dolorem nam, odit dolor. Nisi hic delectus deleniti id minus nam fugiat a quae aspernatur sed, vero maiores necessitatibus </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

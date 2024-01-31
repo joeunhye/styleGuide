@@ -1,45 +1,57 @@
 .pagination {
     display: flex;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
+    margin-top: 6rem;
+    font-size: 1.4rem;
+}
+.popup .pagination {
+    margin-top: 15px;
 }
 .pagination .page-btn {
     display: block;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #ddd;
-    background-image: url("../../images/chevron-right-solid.svg");
+    width: 38px;
+    height: 38px;
+    background-image: url('../../images/icon/icon-pagination-arrow.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80%;
+    background-size: 13px;
+    border: 1px solid #dbdbdb;
 }
 .pagination .prev {
     transform: rotate(-180deg);
 }
 .pagination .first {
     transform: rotate(-180deg);
-    background-image: url("../../images/angles-right-solid.svg");
+    background-image: url('../../images/icon/angles-right-solid.svg');
+    background-size: 15px;
 }
 .pagination .last {
-    background-image: url("../../images/angles-right-solid.svg");
+    background-image: url('../../images/icon/angles-right-solid.svg');
+    background-size: 15px;
 }
 .pagination .page-list {
     display: flex;
-    gap: 5px;
+    gap: 8px;
 }
 .pagination .page-item {
     transition: 0.3s;
 }
 .pagination .page-item.active {
-    background: #587fef;
+    background: #00467e;
 }
 .pagination .page-item.active a {
-    color: #ffffff;
+    border: 0;
+    color: #fff;
 }
 .pagination .page-item a {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 25px;
-    padding: 5px;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #dbdbdb;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
 }

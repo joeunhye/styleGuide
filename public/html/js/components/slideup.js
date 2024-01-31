@@ -143,7 +143,6 @@ let slideToggle = (target, duration = 500) => {
 
 let speedAnimation = 600;
 
-
 let targetItem = document.querySelector('.searchDetailCont');
 
 let slideBtnClick = (cl, sl) => document.querySelector(cl).addEventListener('click', () => sl(targetItem, speedAnimation));

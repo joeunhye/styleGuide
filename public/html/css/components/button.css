@@ -5,7 +5,11 @@
 }
 
 .btn-group .btn {
-    flex: 1;
+    /* flex: 1; */
+}
+
+.btn-group.center {
+    justify-content: center;
 }
 
 .btn {
@@ -17,6 +21,7 @@
     border: 1px solid transparent;
     vertical-align: middle;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .btn:hover {

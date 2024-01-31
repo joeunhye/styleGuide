@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/components/tab.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Tab('#normal-tab');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- tab -->
+    <div class="demo-contents">
+        <div class="code-title">tab</div>
+
+        <!-- sample code -->
+        <div id="normal-tab">
+            <ul class="tab-btn-list">
+                <li class="tab-btn on"><a href="javascript:void(0)">tab1<span class="visually-hidden">선택됨</span><span class="visually-hidden">선택됨</span><span class="visually-hidden">선택됨</span></a></li>
+                <li class="tab-btn"><a href="javascript:void(0)">tab2<span class="visually-hidden">선택됨</span><span class="visually-hidden">선택됨</span></a></li>
+                <li class="tab-btn"><a href="javascript:void(0)">tab3<span class="visually-hidden">선택됨</span></a></li>
+                <li class="tab-btn"><a href="javascript:void(0)">tab4</a></li>
+            </ul>
+            <div class="tab-contents-wrap">
+                <div class="tab-content on">탭 내용입니다.1 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.탭 내용입니다.탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.</div>
+                <div class="tab-content">탭 내용입니다.2 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.탭 내용입니다.탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.</div>
+                <div class="tab-content">탭 내용입니다.3 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.탭 내용입니다.탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.</div>
+                <div class="tab-content">탭 내용입니다.4 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.탭 내용입니다.탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다. 탭 내용입니다.</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

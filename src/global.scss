@@ -12,7 +12,7 @@
 	--color-bg: #ededed;
 	--color-dark: #22252f;
 	--color-block: #2e2e2e;
-	--color-yellow: #f8b600;
+	--color-yellow: #ffb70d;
 	--color-blue: #159eca;
 	--color-gray: #8a8a8a;
 	--color-lightgray: #ddd;
@@ -52,6 +52,15 @@ button {
 
 .hljs {
 	white-space: break-spaces;
+}
+
+code {
+	font-family: "Fira Code", monospace;
+	background-color: #45474d;
+    padding: 3px 5px;
+    border-radius: 5px;
+	color: var(--color-yellow);
+	font-size: 0.9rem;
 }
 
 /* scroll bar custom */

@@ -1,7 +1,7 @@
 /* 썸네일 리스트 */
 .thumbnail-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -63,6 +63,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 5px;
+    margin-bottom: 10px;
 }
 
 .grid-view-select .btn-item {
@@ -95,9 +96,12 @@
     background-color: #ffffff;
 }
 
+.thumbnail-item.row + .thumbnail-item.row {
+    margin-top: 10px;
+}
 
-@media all and (max-width: 486px ) {
+@media all and (max-width: 640px) {
     .thumbnail-list {
-        grid-template-columns: auto;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

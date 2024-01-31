@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/components/dropdown.js"></script>    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            dropDownToggle();
+        })
+    </script>
+</head>
+
+<body>
+    <!-- dropdown toggle -->
+    <div class="demo-contents">
+        <div class="code-title">dropdown toggle</div>
+
+        <!-- sample code -->
+        <div class="dropdown-toggle-group">
+            <button type="button" class="dropdown-toggle btn btn--secondaly">드롭다운</button>
+            <ul class="dropdown-menu">
+                <li class="menu-item"><a href="">옵션 1</a></li>
+                <li class="menu-item"><a href="">옵션 2</a></li>
+                <li class="menu-item"><a href="">옵션 3</a></li>
+            </ul>
+        </div>
+        <div class="dropdown-toggle-group">
+            <button type="button" class="dropdown-toggle btn btn--secondaly">드롭다운</button>
+            <ul class="dropdown-menu">
+                <li class="menu-item"><a href="">옵션 1</a></li>
+                <li class="menu-item"><a href="">옵션 2</a></li>
+                <li class="menu-item"><a href="">옵션 3</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
