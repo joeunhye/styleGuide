@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import ReadMe from './page/ReadMe/ReadMe'
 import Buttons from './page/Buttons/Buttons';
@@ -24,7 +24,7 @@ import BoardList from './page/BoardList/BoardList';
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter basename="/app">
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<ReadMe />} />
@@ -49,7 +49,7 @@ function App() {
           <Route path='/icons' element={<Icons />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
