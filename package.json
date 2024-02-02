@@ -1,5 +1,6 @@
 {
   "name": "wvtexstyleguide",
+  "homepage": "https://joeunhye.github.io/styleGuide",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "predeploy" : "npm run build"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "classnames": "^2.5.1",
