@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/components/tab.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            sortList();
+        })
+
+        // 리스트 정렬
+        function sortList() {
+            const sortItems = document.querySelectorAll('.sort-item');
+            
+            function toggleSortDirection(target) {
+                const isUp = target.classList.contains('up');
+                target.classList.toggle('up', !isUp);
+                target.classList.toggle('down', isUp);
+            }
+            
+            function removeActiveClassFromOthers(clickedItem) {
+                sortItems.forEach((item) => {
+                    if (item !== clickedItem) {
+                        item.classList.remove('active');
+                    }
+                });
+            }
+            
+            function updateAccessibilityText(item) {
+                const targetSkips = item.querySelectorAll('.visually-hidden');
+                targetSkips.forEach((targetSkip) => targetSkip.remove());
+                accessibilityText(item);
+            }
+            
+            sortItems.forEach((sortItem) => {
+                sortItem.addEventListener('click', function () {
+                    removeActiveClassFromOthers(sortItem);
+                    sortItem.classList.add('active');
+                    toggleSortDirection(sortItem);
+                    updateAccessibilityText(sortItem);
+                }, { capture: true });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- table 형테 div -->
+    <div class="demo-contents">
+        <div class="code-title">table 형테 div</div>
+
+        <!-- samle code -->
+        <div class="table-container center">
+            <div class="table-head">
+                <div class="table-item">No</div>
+                <div class="table-item">제목</div>
+                <div class="table-item">첨부파일</div>
+                <div class="table-item">날짜</div>
+            </div>
+            <ul class="table-body">
+                <li class="table-list">
+                    <div class="table-item tb-none">1</div>
+                    <div class="table-item tb-full"><a href="">게시판 제목입니다</a></div>
+                    <div class="table-item tb-text-center">yes</div>
+                    <div class="table-item tb-text-right">2023.07.05</div>
+                </li>
+                <li class="table-list">
+                    <div class="table-item tb-none">1</div>
+                    <div class="table-item tb-full"><a href="">게시판 제목입니다</a></div>
+                    <div class="table-item tb-text-center">yes</div>
+                    <div class="table-item tb-text-right">2023.07.05</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 기본 table -->
+    <div class="demo-contents">
+        <div class="code-title">기본 table</div>
+
+        <!-- sample code -->
+        <table class="table center">
+            <colgroup>
+                <col style="width: 10%;">
+                <col style="width: 50%;">
+                <col style="width: 20%;">
+                <col style="width: 20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">첨부파일</th>
+                    <th scope="col">날짜</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">게시판 제목입니다</a></td>
+                    <td>yes</td>
+                    <td>2023.07.05</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 모바일 타이틀 고정 스크롤 table -->
+    <div class="demo-contents">
+        <div class="code-title">모바일 타이틀 고정 스크롤 table</div>
+
+        <!-- sample code -->
+        <div class="scroll-table">
+            <div class="sticky-table">
+                <table class="table">
+                    <caption hidden="">테이블 내용입니다</caption>
+                    <colgroup>
+                        <col style="width: 20%;">
+                        <col style="width: 30%;">
+                        <col style="width: 25%;">
+                        <col style="width: 25%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <!-- class: pin 스크롤 고정 -->
+                            <th scope="col" class="pin">구분</th>
+                            <th scope="col">수강신청기간</th>
+                            <th scope="col">학습기간</th>
+                            <th scope="col">학습평가(시험응시)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">전문교육</th>
+                            <td>2.3(월) 09:00 ~ 11.28(토) 13:00</td>
+                            <td>수강승인일 ~ 11.30(월) 17:00</td>
+                            <td>진도율 80% 이상 ~ 11.30(월) 17:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" rowspan="4">법정교육</th>
+                            <td>3.2(월) 09:00 ~ 3.13(금) 17:00</td>
+                            <td>수강승인일 ~ 3.20(금) 17:00</td>
+                            <td>진도율 80% 이상 ~ 3.20(금) 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>5.4(월) 09:00 ~ 5.15(금) 17:00</td>
+                            <td>수강승인일 ~ 5.22(금) 17:00</td>
+                            <td>진도율 80% 이상 ~ 5.22(금) 17:00</td>
+                        </tr>
+                        <tr>
+                            <td>11.2(월) 09:00 ~ 11.13(금) 17:00</td>
+                            <td>수강승인일 ~ 11.20(금) 17:00</td>
+                            <td>진도율 80% 이상 ~ 11.20(금) 17:00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 반응형에서 수직정렬 테이블(내용 수직 형식) -->
+    <div class="demo-contents">
+        <div class="code-title">반응형에서 수직정렬 테이블(내용 수직 형식)</div>
+
+        <!-- sample code -->
+        <table class="table mb-row-table">
+            <caption hidden="">테이블 내용입니다</caption>
+            <thead>
+                <tr>
+                    <th scope="col" class="pin">구분</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">타이틀</th>
+                    <td>
+                        <!-- td-text 클래스 : 리스트 위에 텍스트 -->
+                        <p class="td-text">테이블 내부 리스트 위에 있는 내용</p>
+                        <ul class="bullet-list">
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">타이틀</th>
+                    <td>
+                        <p class="td-text">테이블 내부 리스트 위에 있는 내용</p>
+                        <ul class="bullet-list">
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 반응형에서 중복 타이틀 있는 수직정렬 테이블 -->
+    <div class="demo-contents">
+        <div class="code-title">반응형에서 중복 타이틀 있는 수직정렬 테이블</div>
+
+        <!-- sample code -->
+        <table class="table mb-row-table">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">평가항목</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">타이틀</th>
+                    <td data-title="테이블 타이틀">
+                        <p class="td-text">테이블 내부 리스트 위에 있는 내용</p>
+                        <ul class="bullet-list">
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                        </ul>
+                    </td>
+                    <td data-title="테이블 타이틀">
+                        <p class="td-text">테이블 내부 리스트 위에 있는 내용</p>
+                        <ul class="bullet-list">
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">타이틀</th>
+                    <td data-title="테이블 타이틀">
+                        <p class="td-text">테이블 내부 리스트 위에 있는 내용</p>
+                        <ul class="bullet-list">
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                        </ul>
+                    </td>
+                    <td data-title="테이블 타이틀">
+                        <p class="td-text">테이블 내부 리스트 위에 있는 내용</p>
+                        <ul class="bullet-list">
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                            <li>테이블 내용 테이블 내용 테이블 내용 테이블 내용</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 반응형에서 수직정렬 테이블(내용 수평정렬 형식) -->
+    <div class="demo-contents">
+        <div class="code-title">반응형에서 수직정렬 테이블(내용 수평정렬 형식)</div>
+
+        <!-- sample code -->
+        <table class="table mb-column-table">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th scope="col">평가항목</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                </tr>
+                <tr>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 내용 수평정렬 형식 2 -->
+    <div class="demo-contents">
+        <div class="code-title">내용 수평정렬 형식 2</div>
+
+        <!-- sample code -->
+        <table class="table mb-column-table">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th scope="col">구분</th>
+                    <th scope="col">평가항목</th>
+                    <th scope="col">내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">구분</th>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                </tr>
+                <tr>
+                    <th scope="row">구분</th>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                    <td data-title="테이블 타이틀">내용내용</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 타이틀 여러개 있는 테이블 (타이틀 수직) -->
+    <div class="demo-contents">
+        <div class="code-title">타이틀 여러개 있는 테이블 (타이틀 수직)</div>
+
+        <!-- sample code -->
+        <table class="table mb-row-table depth-table-row">
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th scope="colgroup" colspan="6">큰 타이틀</th>
+                </tr>
+                <tr>
+                    <th scope="row">타이틀 1</th>
+                    <td>내용내용 1</td>
+                    <th scope="row">타이틀 2</th>
+                    <td>내용내용 2</td>
+                    <th scope="row">타이틀 3</th>
+                    <td>내용내용 3</td>
+                </tr>
+                <tr>
+                    <th scope="row">타이틀 4</th>
+                    <td colspan="2">내용내용 4</td>
+                    <th scope="row">타이틀 5</th>
+                    <td colspan="2">내용내용 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 타이틀 여러개 있는 테이블 (타이틀 수평) -->
+    <div class="demo-contents">
+        <div class="code-title">타이틀 여러개 있는 테이블 (타이틀 수평)</div>
+
+        <!-- sample code -->
+        <table class="table mb-column-table depth-table-column">
+            <caption></caption>
+            <tbody>
+                <tr>
+                    <th scope="colgroup" colspan="6">큰 타이틀</th>
+                </tr>
+                <tr>
+                    <th scope="row">타이틀 1</th>
+                    <td data-title="타이틀 1">내용내용 1</td>
+                    <th scope="row">타이틀 2</th>
+                    <td data-title="타이틀 2">내용내용 2</td>
+                    <th scope="row">타이틀 3</th>
+                    <td data-title="타이틀 3">내용내용 3</td>
+                </tr>
+                <tr>
+                    <th scope="row">타이틀 4</th>
+                    <td colspan="2" data-title="타이틀 4">내용내용 4</td>
+                    <th scope="row">타이틀 5</th>
+                    <td colspan="2" data-title="타이틀 5">내용내용 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 건수 및 정렬 -->
+    <div class="demo-contents">
+        <div class="code-title">건수 및 정렬</div>
+
+        <!-- sample code -->
+        <div class="list-top-group">
+            <div class="list-total">
+                총 <strong>70</strong>건
+            </div>
+            <div class="sort-list">                        
+                <a href="javascript:void(0)" class="sort-item on down">최신순<span class="visually-hidden">선택됨</span></a>
+                <a href="javascript:void(0)" class="sort-item down">인기순</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

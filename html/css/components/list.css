@@ -1,0 +1,16 @@
+/* 목록 리스트 스타일 */
+.bullet-list {
+    padding-left: 20px;
+}
+
+.bullet-list > li {
+    list-style-type: disc;
+}
+
+.order-list {
+    padding-left: 20px;
+}
+
+.order-list > li {
+    list-style-type: auto;
+}
