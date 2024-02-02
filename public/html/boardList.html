@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <!-- board list -->
+    <div class="demo-contents">
+        <div class="code-title">board list</div>
+
+        <!-- sample code -->
+        <div class="responsive-table">
+            <div class="list-accessories">
+                <div class="list-length">총 <span class="text--blue">20</span>건</div>
+                <div class="current-page">현재페이지 <span class="text--blue">1</span>/8</div>
+            </div>
+            <table class="table center">
+                <!-- PUB : pc-only 클래스 : 모바일에서 사라짐 -->
+                <colgroup class="pc-only">
+                    <col style="width: 7%">
+                    <col style="width: 15%">
+                    <col style="width: auto">
+                    <col style="width: 10%">
+                    <col style="width: 10%">
+                    <col style="width: 10%">
+                    <col style="width: 8%">
+                </colgroup>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>분류</th>
+                        <th>제목</th>
+                        <th>파일</th>
+                        <th>작성자</th>
+                        <th>등록일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- PUB : 게시판에서 고정되는 목록 td에 fix-item 클래스 추가  -->
+                    <tr class="fix-table-item">
+                        <!-- PUB : m-show 클래스 : pc에서만 보이는 요소 -->
+                        <!-- PUB : m-full 클래스 : 모바일에서 넓이 100차지하는 요소 -->
+                        <!-- PUB : m-small 클래스 : 모바일에서 타이틀 이외 요소 -->
+                        <td><img src="./images/icon/icon-tack.svg" alt="압정 아이콘"></td>
+                        <td>석면해체작업감리원</td>
+                        <td class="m-show m-full al"><a href="" class="ellipsis2 table-title">2023년 제4기(9월) 석면해체작업 고급감리원 과정 교육 수료자 명단 공지 2023년 제4기(9월) 석면해체작업 고급감리원 과정 교육 수료자 명단 공지</a></td>
+                        <td class="m-show m-small"><span class="td-icon"><i class="gg-file"></i>12</span></td>
+                        <td>윤주원</td>
+                        <td class="m-show m-small">2023-09-15</td>
+                        <td><span class="td-icon"><i class="gg-eye"></i> 1057</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

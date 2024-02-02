@@ -10,7 +10,7 @@ const Icons = () => {
 
             <br />
             <h4>css.gg <a href="https://css.gg/" target="_blank" style={{verticalAlign: 'sub', color: `var(--color-blue)` }}><BiLink size={20} /></a></h4>
-            <h4>Feather <a href="https://feathericons.com/" target="_blank" style={{verticalAlign: 'sub', color: `var(--color-blue)` }}><BiLink size={20} /></a></h4>
+            <h4>feather <a href="https://feathericons.com/" target="_blank" style={{verticalAlign: 'sub', color: `var(--color-blue)` }}><BiLink size={20} /></a></h4>
             <h4>remixicon <a href="https://remixicon.com/" target="_blank" style={{verticalAlign: 'sub', color: `var(--color-blue)` }}><BiLink size={20} /></a></h4>
             <h4>fontello <a href="https://fontello.com/" target="_blank" style={{verticalAlign: 'sub', color: `var(--color-blue)` }}><BiLink size={20} /></a></h4>
             <h4>fontawesome <a href="https://fontawesome.com/" target="_blank" style={{verticalAlign: 'sub', color: `var(--color-blue)` }}><BiLink size={20} /></a></h4>

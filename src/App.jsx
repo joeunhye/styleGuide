@@ -19,6 +19,7 @@ import ThubnailList from './page/ThubnailList/ThubnailList';
 import ListStyle from './page/ListStyle/ListStyle';
 import Search from './page/Search/Search';
 import Icons from './page/Icons/Icons';
+import BoardList from './page/BoardList/BoardList';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/switch' element={<Switch />} />
           <Route path='/tab' element={<Tab />} />
           <Route path='/table' element={<Table />} />
+          <Route path='/boardList' element={<BoardList />} />
           <Route path='/pagination' element={<Pagination />} />
           <Route path='/popup' element={<Popup />} />
           <Route path='/accordion' element={<Accordion />} />

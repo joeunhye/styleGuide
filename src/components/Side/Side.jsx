@@ -17,6 +17,7 @@ const Side = () => {
             <NavLink to='/switch'>Switch</NavLink>
             <NavLink to='/tab'>Tab</NavLink>
             <NavLink to='/table'>Table</NavLink>
+            <NavLink to='/boardList'>Board List</NavLink>
             <NavLink to='/pagination'>Pagination</NavLink>
             <NavLink to='/popup'>Popup</NavLink>
             <NavLink to='/accordion'>Accordion</NavLink>

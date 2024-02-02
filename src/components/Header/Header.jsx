@@ -14,6 +14,7 @@ const Header = () => {
     const { darkMode, toggleDarkMode } = useDarkMode();
     const {DeviceModeset, handleDeviceMode} = useDeviceMode();
     const pathName = useLocation().pathname;
+    console.log(pathName !== '/' || pathName !== '/icons')
 
     const deviceStyle = cx(DeviceModeset);
  
@@ -24,14 +25,15 @@ const Header = () => {
             </h1>
 
             {/* 디바이스 모드 */}
-            {pathName !== '/' || pathName !== '/icons' && (
-                <div className={cx('device', {dark : darkMode}, deviceStyle)}>
-                    <button data-device='mobile' onClick={(e) => handleDeviceMode(e)}><CiMobile2 size={25} /></button>
-                    <button data-device='tablet' onClick={(e) => handleDeviceMode(e)}><BsTabletLandscape size={20} /></button>
-                    <button data-device='desktop' onClick={(e) => handleDeviceMode(e)}><SlScreenDesktop size={23} /></button>
-                </div>
-            )}
-            
+            {
+                pathName === '/' || pathName === '/icons' ? "" : (
+                    <div className={cx('device', {dark : darkMode}, deviceStyle)}>
+                        <button data-device='mobile' onClick={(e) => handleDeviceMode(e)}><CiMobile2 size={25} /></button>
+                        <button data-device='tablet' onClick={(e) => handleDeviceMode(e)}><BsTabletLandscape size={20} /></button>
+                        <button data-device='desktop' onClick={(e) => handleDeviceMode(e)}><SlScreenDesktop size={23} /></button>
+                    </div>
+                )
+            }
 
             {/* 다크모드 토글 */}
             <button className={cx('theme')} onClick={toggleDarkMode}>
