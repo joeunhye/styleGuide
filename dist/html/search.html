@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://unpkg.com/css.gg/icons/icons.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/components/search.js"></script>
+</head>
+
+<body>
+    <!-- search -->
+    <div class="demo-contents">
+        <div class="code-title">search</div>
+
+        <!-- sample code -->
+        <div class="content-search">
+            <form action="">
+                <div class="content-search__inner">
+                    <select title="셀렉트 정보" name="">
+                        <option value="0">옵션1</option>
+                        <option value="1">옵션2</option>
+                        <option value="2">옵션3</option>
+                    </select>
+                    <span class="division">|</span>
+                    <div class="form-group">
+                        <label for="nameInp" class="skip">검색어 입력</label>
+                        <input type="search" id="nameInp" placeholder="검색어를 입력하세요.">
+                        <button type="button" class="search__btn"><i class="gg-search"></i><span class="skip">검색버튼</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- detail search -->
+    <div class="demo-contents">
+        <div class="code-title">detail search</div>
+
+        <!-- code sample -->
+        <div class="content-search detail-search">
+            <div class="content-search__inner">
+                <select title="셀렉트 정보" name="">
+                    <option value="0">옵션1</option>
+                    <option value="1">옵션2</option>
+                    <option value="2">옵션3</option>
+                </select>
+                <span class="division">|</span>
+                <select title="셀렉트 정보" name="">
+                    <option value="0">옵션1</option>
+                    <option value="1">옵션2</option>
+                    <option value="2">옵션3</option>
+                </select>
+                <span class="division">|</span>
+                <div class="form-group">
+                    <label for="nameInp" class="skip">검색어 입력</label><input type="search" id="nameInp" placeholder="교육과정 검색">
+                    <button type="button" class="search__btn"><i class="gg-search"></i><span class="skip">검색버튼</span></button>
+                    <button type="button" class="search__btn-detail">상세검색<i class="gg-details-more"></i></button>
+                </div>
+
+                <!-- 상세검색 선택지 영역 -->
+                <div class="detail-search-box">
+                    <ul class="check-box-list">
+                        <li class="list-item">
+                            <h4 class="item-title">교육운영</h4>
+                            <ul>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box1" class="skip">
+                                    <label for="check-box1">전체보기</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box2" class="skip">
+                                    <label for="check-box2">집합교육</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box3" class="skip">
+                                    <label for="check-box3">사이버교육</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box4" class="skip">
+                                    <label for="check-box4">혼합교육</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item">
+                            <h4 class="item-title">교육구분</h4>
+                            <ul>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box5" class="skip">
+                                    <label for="check-box5">전체보기</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box6" class="skip">
+                                    <label for="check-box6">기본교육</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box7" class="skip">
+                                    <label for="check-box7">전문교육</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box8" class="skip">
+                                    <label for="check-box8">법정교육</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box9" class="skip">
+                                    <label for="check-box9">특별교육</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-item">
+                            <h4 class="item-title">교육일정</h4>
+                            <ul>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box10" class="skip">
+                                    <label for="check-box10">신청기간</label>
+                                </li>
+                                <li class="check-box">
+                                    <input type="checkbox" name="" id="check-box11" class="skip">
+                                    <label for="check-box11">교육기간</label>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn--primary btn-l">적용</button>
+                        <button type="button" class="btn btn--secondaly btn-l detail-search-close">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr> 
+
+</body>
+
+</html>

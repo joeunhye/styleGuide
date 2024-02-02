@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script defer src="./js/components/gridview.js"></script>  
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gridView();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- column 타입 -->
+    <div class="demo-contents">
+        <div class="code-title">column 타입</div>
+
+        <!-- sample code -->
+        <div class="thumbnail-list">
+            <div class="thumbnail-item">
+                <a href="" class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1036/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title">제목 입니다</p>
+                        <p class="text__content ellipsis2">
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="thumbnail-item">
+                <a href="" class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1036/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title">제목 입니다</p>
+                        <p class="text__content ellipsis2">
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="thumbnail-item">
+                <a href="" class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1036/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title">제목 입니다</p>
+                        <p class="text__content ellipsis2">
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="thumbnail-item">
+                <a href="" class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1036/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title">제목 입니다</p>
+                        <p class="text__content ellipsis2">
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- row 타입 -->
+    <div class="demo-contents">
+        <div class="code-title">row 타입</div>
+
+        <!-- sample code -->
+        <div class="thumbnail-item row">
+            <a href="" class="item-wrapper">
+                <div class="thumbnail-img">
+                    <img src="https://picsum.photos/id/1036/500/300" alt="">
+                </div>
+                <div class="item-info-group">
+                    <p class="text__title">제목 입니다</p>
+                    <p class="text__content ellipsis2">
+                        컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                        컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                    </p>
+                </div>
+            </a>
+        </div>
+        <div class="thumbnail-item row">
+            <a href="" class="item-wrapper">
+                <div class="thumbnail-img">
+                    <img src="https://picsum.photos/id/1036/500/300" alt="">
+                </div>
+                <div class="item-info-group">
+                    <p class="text__title">제목 입니다</p>
+                    <p class="text__content ellipsis2">
+                        컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                        컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- 갤러리형, 리스트형으로 보기 -->
+    <div class="demo-contents">
+        <div class="code-title">갤러리형, 리스트형으로 보기</div>
+
+        <!-- sample code -->
+        <ul class="grid-view-select">
+            <li class="btn-item">
+                <button type="button" data-grid="gridList" title="리스트 형태로 보기" class="grid-view-btn"></button>
+            </li>
+            <li class="btn-item">
+                <button type="button" data-grid="gridGallery" title="갤러리 형태로 보기" class="grid-view-btn on"><span class="visually-hidden">선택됨</span></button>
+            </li>
+        </ul>
+        <div class="thumbnail-list grid-list">
+            <div class="thumbnail-item">
+                <div class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1025/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title"><a href="">제목 입니다</a></p>
+                        <p class="text__content">
+                            <a href="" class="ellipsis2">
+                                컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                                컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            </a>
+                        </p>
+                        <button type="button" class="btn btn--primary btn-s">버튼</button>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail-item">
+                <div class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1025/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title"><a href="">제목 입니다</a></p>
+                        <p class="text__content">
+                            <a href="" class="ellipsis2">
+                                컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                                컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            </a>
+                        </p>
+                        <button type="button" class="btn btn--primary btn-m">버튼</button>
+                    </div>
+                </div>
+            </div>
+            <div class="thumbnail-item">
+                <div class="item-wrapper">
+                    <div class="thumbnail-img">
+                        <img src="https://picsum.photos/id/1025/500/300" alt="">
+                    </div>
+                    <div class="item-info-group">
+                        <p class="text__title"><a href="">제목 입니다</a></p>
+                        <p class="text__content">
+                            <a href="" class="ellipsis2">
+                                컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                                컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다. 컨텐츠 내용입니다.
+                            </a>
+                        </p>
+                        <button type="button" class="btn btn--primary btn-l">버튼</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

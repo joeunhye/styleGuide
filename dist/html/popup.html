@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wv Components-header</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/base/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/components/popup.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="./js/components/popup.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+        });
+    </script>
+</head>
+
+<body>
+    <!-- popup -->
+    <div class="demo-contents">
+        <div class="code-title">popup</div>
+
+        <!-- sample code -->
+        <!-- PUB : 팝업 호출 -->
+        <button class="btn btn--primary btn-l" onclick="popOpen('popup1', this);">팝업 호출</button>
+        <button class="btn btn--primary btn-l" onclick="popOpen('popup2', this);">작은 팝업 호출</button>
+        <button class="btn btn--primary btn-l" onclick="popOpen('alert', this);">알럿 팝업 호출</button>
+
+        <!-- PUB : 팝업 기본 구조 -->
+        <div class="popup" id="popup1">
+            <div class="popup__box">
+                <!-- popupHead -->
+                <div class="popup__head">
+                    팝업 타이틀
+
+                    <!-- popupClose  -->
+                    <button type="button" class="popup__close" title="팝업 닫기" onclick="popClose('popup1');">
+                        <img src="./images/icon/icon-close.svg" alt="">
+                    </button>
+                </div>
+
+                <!-- popupBody -->
+                <div class="popup__body">팝업 내용</div>
+
+                <!-- popupFoot -->
+                <div class="popup__foot">
+                    <div class="btn-group center">
+                        <button type="button" class="btn btn--secondaly btn-l" onclick="popClose('popup1');">취소</button>
+                        <button type="button" class="btn btn--primary btn-l">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PUB : 작은 팝업 기존 구조 -->
+        <div class="popup small" id="popup2">
+            <div class="popup__box">
+                <!-- popupHead -->
+                <div class="popup__head">
+                    팝업 타이틀
+
+                    <!-- popupClose  -->
+                    <button type="button" class="popup__close" title="팝업 닫기" onclick="popClose('popup2');">
+                        <img src="./images/icon/icon-close.svg" alt="">
+                    </button>
+                </div>
+
+                <!-- popupBody -->
+                <div class="popup__body">팝업 내용</div>
+
+                <!-- popupFoot -->
+                <div class="popup__foot">
+                    <div class="btn-group center">
+                        <button type="button" class="btn btn--secondaly btn-l" onclick="popClose('popup2');">취소</button>
+                        <button type="button" class="btn btn--primary btn-l">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 알럿 팝업 기본 구조 -->
+        <div class="popup small alert" id="alert">
+            <div class="popup__box">
+                <!-- popupHead -->
+                <div class="popup__head">
+                    <img src="./images/icon/icon-alert.svg" alt="">
+                    팝업 타이틀
+                </div>
+
+                <!-- popupBody -->
+                <div class="popup__body">팝업 내용</div>
+
+                <!-- popupFoot -->
+                <div class="popup__foot">
+                    <div class="btn-group center">
+                        <button type="button" class="btn btn--primary btn-l" onclick="popClose('alert');">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
