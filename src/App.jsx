@@ -24,7 +24,7 @@ import BoardList from './page/BoardList/BoardList';
 function App() {
 
   return (
-    <HashRouter basename="/app">
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<ReadMe />} />
@@ -49,7 +49,7 @@ function App() {
           <Route path='/icons' element={<Icons />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
