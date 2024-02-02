@@ -17,6 +17,8 @@ import Zoom from './page/Zoom/Zoom';
 import TopBtn from './page/TopBtn/TopBtn';
 import ThubnailList from './page/ThubnailList/ThubnailList';
 import ListStyle from './page/ListStyle/ListStyle';
+import Search from './page/Search/Search';
+import Icons from './page/Icons/Icons';
 
 function App() {
 
@@ -41,6 +43,8 @@ function App() {
           <Route path='/topBtn' element={<TopBtn />} />
           <Route path='/thubnailList' element={<ThubnailList />} />
           <Route path='/listStyle' element={<ListStyle />} />
+          <Route path='/search' element={<Search />} />
+          <Route path='/icons' element={<Icons />} />
         </Route>
       </Routes>
     </BrowserRouter>

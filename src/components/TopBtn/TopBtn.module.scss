@@ -1,0 +1,16 @@
+.topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    color: var(--color-blue);
+    font-size: 2.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}

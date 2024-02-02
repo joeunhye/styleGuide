@@ -24,7 +24,7 @@ const Header = () => {
             </h1>
 
             {/* 디바이스 모드 */}
-            {pathName !== '/' && (
+            {pathName !== '/' || pathName !== '/icons' && (
                 <div className={cx('device', {dark : darkMode}, deviceStyle)}>
                     <button data-device='mobile' onClick={(e) => handleDeviceMode(e)}><CiMobile2 size={25} /></button>
                     <button data-device='tablet' onClick={(e) => handleDeviceMode(e)}><BsTabletLandscape size={20} /></button>

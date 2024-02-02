@@ -1,3 +1,76 @@
+/***** FORM *****/
+select {
+    box-sizing: border-box;
+    display: inline-block;
+    /* width: 200px; */
+    min-height: 40px;
+    background-position: calc(100% - 12px) center;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s;
+    cursor: pointer;
+    padding-right: 20px;
+    background: url('../../../images/icon/icon-select-arrow.svg') var(--color-white) no-repeat center;
+    background-position-x: 95%;
+}
+
+select.small {
+    width: 80px;
+    background-position-x: 90%;
+}
+
+input::-webkit-input-placeholder {
+    color: var(--color-gray);
+    font-size: 1.5rem;
+}
+
+input:-ms-input-placeholder {
+    color: var(--color-gray);
+    font-size: 1.5rem;
+}
+
+textarea::-webkit-input-placeholder {
+    color: var(--color-gray);
+    font-size: 1.5rem;
+}
+
+textarea:-ms-input-placeholder {
+    color: var(--color-gray);
+    font-size: 1.5rem;
+}
+
+.division {
+    vertical-align: text-bottom;
+    font-size: 11px;
+    color: var(--color-gray);
+}
+.division--blue-l {
+    margin: 0 10px;
+    font-size: 3rem;
+    color: var(--color-blue);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+.form-group.large {
+    width: 600px;
+}
+
+.form-group + .form-group {
+    margin-top: 10px;
+}
+.form-group > input,
+.form-group > select {
+    flex: 1;
+    width: 100%;
+}
+
 /* =============== input =============== */
 .normal-input {
     width: 100%;
@@ -12,10 +85,6 @@
 }
 .normal-input:disabled::placeholder {
     color: #aaa;
-}
-
-.input-wrap {
-    /* width: 400px; */
 }
 
 .input-wrap + .input-wrap {
@@ -89,7 +158,6 @@ input[type="date"].date-custom::-webkit-calendar-picker-indicator {
     right: 0;
     width: 40px;
     height: 100%;
-    background: url("../../../images/icon-search.svg") no-repeat center / 50%;
     transform: translateY(-50%);
 }
 
