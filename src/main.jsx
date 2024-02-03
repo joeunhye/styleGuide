@@ -25,90 +25,92 @@ import ThubnailList from "./page/ThubnailList/ThubnailList";
 import ListStyle from "./page/ListStyle/ListStyle";
 import Search from "./page/Search/Search";
 import Icons from "./page/Icons/Icons";
+const BASE_URL = import.meta.env.BASE_URL;
+console.log(BASE_URL);
 
 const router = createBrowserRouter([
 	{
-		path: "/styleGuide/",
+		path: BASE_URL,
 		element: <Layout />,
 		children: [
 			{
-				path: "/styleGuide/",
+				path: BASE_URL,
 				element: <ReadMe />,
 			},
 			{
-				path: "/styleGuide/buttons",
+				path: `${BASE_URL}/buttons`,
 				element: <Buttons />,
 			},
 			{
-				path: "/styleGuide/text",
+				path: `${BASE_URL}/text`,
 				element: <Text />,
 			},
 			{
-				path: "/styleGuide/input",
+				path: `${BASE_URL}/input`,
 				element: <Input />,
 			},
 			{
-				path: "/styleGuide/form",
+				path: `${BASE_URL}/form`,
 				element: <Form />,
 			},
 			{
-				path: "/styleGuide/checkboxradio",
+				path: `${BASE_URL}/checkboxradio`,
 				element: <CheckBoxRadio />,
 			},
 			{
-				path: "/styleGuide/switch",
+				path: `${BASE_URL}/switch`,
 				element: <Switch />,
 			},
 			{
-				path: "/styleGuide/tab",
+				path: `${BASE_URL}/tab`,
 				element: <Tab />,
 			},
 			{
-				path: "/styleGuide/table",
+				path: `${BASE_URL}/table`,
 				element: <Table />,
 			},
 			{
-				path: "/styleGuide/boardList",
+				path: `${BASE_URL}/boardList`,
 				element: <BoardList />,
 			},
 			{
-				path: "/styleGuide/pagination",
+				path: `${BASE_URL}/pagination`,
 				element: <Pagination />,
 			},
 			{
-				path: "/styleGuide/popup",
+				path: `${BASE_URL}/popup`,
 				element: <Popup />,
 			},
 			{
-				path: "/styleGuide/accordion",
+				path: `${BASE_URL}/accordion`,
 				element: <Accordion />,
 			},
 			{
-				path: "/styleGuide/dropdown",
+				path: `${BASE_URL}/dropdown`,
 				element: <Dropdown />,
 			},
 			{
-				path: "/styleGuide/zoom",
+				path: `${BASE_URL}/zoom`,
 				element: <Zoom />,
 			},
 			{
-				path: "/styleGuide/topBtn",
+				path: `${BASE_URL}/topBtn`,
 				element: <TopBtn />,
 			},
 			{
-				path: "/styleGuide/thubnailList",
+				path: `${BASE_URL}/thubnailList`,
 				element: <ThubnailList />,
 			},
 			{
-				path: "/styleGuide/listStyle",
+				path: `${BASE_URL}/listStyle`,
 				element: <ListStyle />,
 			},
 			{
-				path: "/styleGuide/search",
+				path: `${BASE_URL}/search`,
 				element: <Search />,
 			},
 			{
-				path: "/styleGuide/icons",
+				path: `${BASE_URL}/icons`,
 				element: <Icons />,
 			},
 		],

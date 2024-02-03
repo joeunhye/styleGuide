@@ -13,14 +13,15 @@ const cx = classNames.bind(styles);
 const Header = () => {
 	const { darkMode, toggleDarkMode } = useDarkMode();
 	const { DeviceModeset, handleDeviceMode } = useDeviceMode();
-	const pathName = useLocation().pathname.split("/styleGuide/")[1];
+	const BASE_URL = import.meta.env.BASE_URL;
+	const pathName = useLocation().pathname.split(BASE_URL)[1];
 
 	const deviceStyle = cx(DeviceModeset);
 
 	return (
 		<header className={cx("header", deviceStyle)}>
 			<h1>
-				<Link to="/">{darkMode ? <img src="/styleGuide/imgs/logo-w.webp" alt="" /> : <img src="//styleGuide/imgs/logo-b.webp" alt="" />}</Link>
+				<Link to={`${BASE_URL}`}>{darkMode ? <img src={`${BASE_URL}imgs/logo-w.webp`} alt="" /> : <img src={`${BASE_URL}imgs/logo-b.webp`} alt="" />}</Link>
 			</h1>
 
 			{/* 디바이스 모드 */}
