@@ -16,6 +16,7 @@ const Contents = ({ content }) => {
 	const [Copy, setCopy] = useState(false);
 	const frameObj = useRef(null);
 	const iframeName = location.pathname.split("/")[1];
+	const BASE_URL = import.meta.env.BASE_URL;
 
 	const [CodeHtml, setCodeHtml] = useState("");
 
@@ -35,7 +36,7 @@ const Contents = ({ content }) => {
 		return (
 			<div className={cx("preview", deviceStyle)}>
 				{/* <div dangerouslySetInnerHTML={iframeCont()} /> */}
-				<iframe src={`/styleGuide/html/${iframeName}.html`} width="100%" height="650" ref={frameObj} onLoad={hadleLoaded} />
+				<iframe src={`${BASE_URL}/html/${iframeName}.html`} width="100%" height="650" ref={frameObj} onLoad={hadleLoaded} />
 			</div>
 		);
 	}
