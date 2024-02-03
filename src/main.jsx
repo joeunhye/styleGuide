@@ -26,7 +26,6 @@ import ListStyle from "./page/ListStyle/ListStyle";
 import Search from "./page/Search/Search";
 import Icons from "./page/Icons/Icons";
 const BASE_URL = import.meta.env.BASE_URL;
-console.log(BASE_URL);
 
 const router = createBrowserRouter([
 	{
@@ -120,7 +119,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<DarkModeProvider>
 		<DeviceModeProvider>
-			<RouterProvider router={router} />
+			<App />
 		</DeviceModeProvider>
 	</DarkModeProvider>
 );

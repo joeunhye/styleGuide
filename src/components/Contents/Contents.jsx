@@ -15,7 +15,7 @@ const Contents = ({ content }) => {
 	const location = useLocation();
 	const [Copy, setCopy] = useState(false);
 	const frameObj = useRef(null);
-	const iframeName = location.pathname.split("/styleGuide/")[1];
+	const iframeName = location.pathname.split("/")[1];
 
 	const [CodeHtml, setCodeHtml] = useState("");
 
