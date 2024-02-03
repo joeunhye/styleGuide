@@ -21,7 +21,7 @@ const Header = () => {
 	return (
 		<header className={cx("header", deviceStyle)}>
 			<h1>
-				<Link to="/">{darkMode ? <img src={`${BASE_URL}imgs/logo-w.webp`} alt="" /> : <img src={`${BASE_URL}imgs/logo-b.webp`} alt="" />}</Link>
+				<Link to="/">{darkMode ? <img src={`/imgs/logo-w.webp`} alt="" /> : <img src={`/imgs/logo-b.webp`} alt="" />}</Link>
 			</h1>
 
 			{/* 디바이스 모드 */}
