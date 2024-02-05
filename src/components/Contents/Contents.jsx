@@ -7,7 +7,6 @@ import { IoMdCheckmark } from "react-icons/io";
 import { useRef, useState } from "react";
 import CodeSnippet from "./CodeSnippet";
 
-
 const cx = classNames.bind(styles);
 
 const Contents = ({ content }) => {
@@ -17,6 +16,7 @@ const Contents = ({ content }) => {
 	const [Copy, setCopy] = useState(false);
 	const frameObj = useRef(null);
 	const iframeName = location.pathname.split("/")[1];
+	const BASE_URL = import.meta.env.BASE_URL;
 
 	const [CodeHtml, setCodeHtml] = useState("");
 
@@ -25,18 +25,18 @@ const Contents = ({ content }) => {
 	};
 
 	// const iframeCont = () => {
-    //     const iframeUrl = `/html/${iframeName}.html`;
-    //     return {
-    //         __html: 
-    //         `<iframe src="${iframeUrl}" width="100%" height="600px" frameborder=0 framespacing=0 />`
-    //     }
-    // }
+	//     const iframeUrl = `/html/${iframeName}.html`;
+	//     return {
+	//         __html:
+	//         `<iframe src="${iframeUrl}" width="100%" height="600px" frameborder=0 framespacing=0 />`
+	//     }
+	// }
 
 	if (content === "preview") {
 		return (
 			<div className={cx("preview", deviceStyle)}>
 				{/* <div dangerouslySetInnerHTML={iframeCont()} /> */}
-				<iframe src={`/html/${iframeName}.html`} width="100%" height="650" ref={frameObj} onLoad={hadleLoaded} />
+				<iframe src={`${BASE_URL}/html/${iframeName}.html`} width="100%" height="650" ref={frameObj} onLoad={hadleLoaded} />
 			</div>
 		);
 	}
@@ -62,9 +62,7 @@ const Contents = ({ content }) => {
 						<button className={cx("btn-copy")}>
 							<IoMdCheckmark size={20} color="#159eca" />
 						</button>
-						<div className={cx('speech-bubble')}>
-							Copied 😀
-						</div>
+						<div className={cx("speech-bubble")}>Copied 😀</div>
 					</>
 				)}
 			</div>
