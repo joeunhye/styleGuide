@@ -18,3 +18,4 @@ const CodeSnippet = ({ language, code }) => {
 export default CodeSnippet;
 
 // https://www.friendstudio.net/how-to-use-highlightjs-with-react/
+// https://rehype-pretty-code.netlify.app/
